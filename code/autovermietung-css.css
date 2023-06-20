@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input[type="submit"] {
+  margin-top: 10px;
+}
+
+#carList, #rentalHistory {
+  margin-top: 20px;
+}
+
+#carList div, #rentalHistory div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#carList div h3 {
+  margin-top: 0;
+}
+
+#rentalHistory div p {
+  margin: 0;
+}
