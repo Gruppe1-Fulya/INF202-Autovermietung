@@ -1,0 +1,36 @@
+pm.sendRequest({
+url: "https://api.example.com/rental",
+method: "POST",
+headers: {
+"Content-Type": "application/json",
+"Authorization": "Bearer YOUR_API_KEY"
+},
+body: {
+mode: "raw",
+raw: JSON.stringify({
+userData,
+carOptions,
+rentalDates
+})
+}
+}, function (err, response) {
+if (err) {
+console.error(err);
+} else {
+console.log(response.json());
+}
+});
+
+pm.test("Check response status code", function () {
+pm.response.to.have.status(200);
+});
+pm.test("Check response body", function () {
+const responseBody = pm.response.json();
+pm.expect(responseBody).to.have.property("transactionId");
+pm.expect(responseBody).to.have.property("rentalDetails");
+});
+
+pm.test("Compare expected and actual results", function () {
+const responseBody = pm.response.json();
+pm.expect(responseBody.transactionId).to.exist;
+pm.expect(responseBody.rentalDetails).to.be.an("object"); });
