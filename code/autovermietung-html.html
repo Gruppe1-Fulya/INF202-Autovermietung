@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Araba Kiralama Uygulaması</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Araba Kiralama Uygulaması</h1>
+
+  <h2>Mevcut Arabalar</h2>
+  <div id="carList"></div>
+
+  <h2>Araba Kiralama Formu</h2>
+  <form id="rentalForm">
+    <label for="name">Adı Soyadı:</label>
+    <input type="text" id="name" required>
+
+    <label for="age">Yaşı:</label>
+    <input type="number" id="age" required>
+
+    <label for="license">Sürücü Belge Numarası:</label>
+    <input type="text" id="license" required>
+
+    <label for="startDate">Başlangıç Tarihi:</label>
+    <input type="date" id="startDate" required>
+
+    <label for="endDate">Bitiş Tarihi:</label>
+    <input type="date" id="endDate" required>
+
+    <input type="submit" value="Kiralama Yap">
+  </form>
+
+  <h2>Kiralama Geçmişi</h2>
+  <div id="rentalHistory"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
